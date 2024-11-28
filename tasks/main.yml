@@ -1,0 +1,10 @@
+---
+# tasks file for apache
+- name: install apache
+  ansible.builtin.yum:
+    name: httpd
+    state: present 
+- name: start the apache 
+  ansible.builtin.service:
+    name: httpd
+    state: started
